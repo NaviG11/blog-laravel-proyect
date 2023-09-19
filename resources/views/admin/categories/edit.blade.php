@@ -7,8 +7,17 @@
 @stop
 
 @section('content')
+    @if (session('info'))
+        {{-- alerta de boostrap --}}
+        <div class="alert alert-success">
+            <strong>
+                {{ session('info') }}
+            </strong>
+        </div>
+    @endif
     <div class="card">
         <div class="card-body">
+            {{-- Form::model(variable, ) --}}
             {!! Form::model($category, ['route' => ['admin.categories.update', $category], 'method' => 'put']) !!}
             <div class="form-group">
                 {!! Form::label('name', 'Nombre') !!}

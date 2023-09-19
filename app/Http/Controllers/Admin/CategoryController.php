@@ -38,7 +38,7 @@ class CategoryController extends Controller
 
         // return $request->all();
         $category = Category::create($request->all());
-        return redirect()->route('admin.categories.edit', $category);
+        return redirect()->route('admin.categories.edit', $category)->with('info', 'La categoría se creó con éxito');
     }
 
     /**
@@ -65,7 +65,7 @@ class CategoryController extends Controller
         //Validación
         $request->validate([
             'name' => 'required',
-            'slug' => 'required|unique:categories'
+            'slug' => "required|unique:categories,slug,$category->id"
         ]);
         // Actualizar información
         $category->update($request->all());
@@ -78,6 +78,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return redirect()->route('admin.categories.index')->with('info', 'La categoría se eliminó con éxito');
     }
 }
