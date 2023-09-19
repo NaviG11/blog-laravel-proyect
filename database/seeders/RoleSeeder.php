@@ -13,6 +13,7 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        Role::create()
+        // Verificar si existe el rol
+        Role::create();
     }
 }

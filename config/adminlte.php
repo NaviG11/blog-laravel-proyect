@@ -150,8 +150,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -323,11 +323,15 @@ return [
             'text' => 'Categorias',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/categories*'],
         ],
+        // Todo: Agregar link para la nueva pestaña de etiquetas
         [
-            'url'  => 'admin/settings',
-            'text' => 'Configuración',
-            'icon' => 'fas fa-fw fa-lock',
+            'route'  => 'admin.tags.index',
+            'text' => 'Etiquetas',
+            'icon' => 'far fa-fw fa-bookmark',
+            // Activar el menu cuando se encuentre en la ruta de tags
+            'active' => ['admin/tags*'],
         ],
         [
             'text'    => 'Registros',
