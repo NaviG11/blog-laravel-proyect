@@ -1,8 +1,8 @@
-<nav class="bg-gray-800" x-data="{ open: false }">
+<nav class="bg-purple-600" x-data="{ open: false }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <!-- Mobile menu button-->
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden shadow">
                 <button x-on:click="open=true" type="button"
                     class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     aria-controls="mobile-menu" aria-expanded="false">
@@ -22,7 +22,7 @@
             {{-- Logotipo --}}
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <a href="/" class="flex flex-shrink-0 items-center">
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white&shade=500"
                         alt="Your Company">
                 </a>
                 <div class="hidden sm:ml-6 sm:block">
