@@ -30,7 +30,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validación
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required|unique:categories'
+        ]);
+
+        // return $request->all();
+        $category = Category::create($request->all());
+        return redirect()->route('admin.categories.edit', $category);
     }
 
     /**
@@ -54,7 +62,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        //Validación
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required|unique:categories'
+        ]);
+        // Actualizar información
+        $category->update($request->all());
+        // Redireccionar
+        return redirect()->route('admin.categories.edit', $category)->with('info', 'La categoría se actualizó con éxito');
     }
 
     /**
