@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    // evita la asignacion masiva
+    protected  $guarded = ['id', 'created_at', 'updated_at'];
     // Relacion uno a muchos inversa
     public function user(){
         return $this->belongsTo(User::class);

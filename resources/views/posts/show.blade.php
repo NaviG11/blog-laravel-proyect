@@ -4,17 +4,22 @@
             {{ $post->name }}
         </h1>
         <div class="text-lg text-gray-500 mb-2">
-            {{ $post->extract }}
+            {!! $post->extract !!}
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {{-- Contenido Principal --}}
             <div class="lg:col-span-2">
                 <figure>
-                    <img class="w-full h-80 object-cover object-center rounded-lg" src="{{ Storage::url($post->image->url) }}"
-                        alt="">
+                    @if ($post->image)
+                        <img class="w-full h-80 object-cover object-center" src="{{ Storage::url($post->image->url) }}"
+                            alt="{{ $post->name }}">
+                    @else
+                        <img class="w-full h-80 object-cover object-center rounded-lg"
+                            src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                    @endif
                 </figure>
                 <div class="text-base text-gray-500 mt-4">
-                    {{ $post->body }}
+                    {!! $post->body !!}
                 </div>
             </div>
             {{-- Contenido relacionado --}}
@@ -26,7 +31,14 @@
                     @foreach ($similares as $similar)
                         <li class="mb-4">
                             <a class="flex" href="{{ route('posts.show', $similar) }}">
-                                <img class="w-48 h-36 object-cover object-center rounded-lg" src="{{ Storage::url($similar->image->url) }}" alt="">
+                                @if ($similar->image)
+                                    <img class="w-36 h-20 object-cover object-center"
+                                        src="{{ Storage::url($similar->image->url) }}" alt="{{ $similar->name }}">
+                                @else
+                                    <img class="w-48 h-36 object-cover object-center rounded-lg"
+                                        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+                                        alt="">
+                                @endif
                                 <span class="ml-2 text-gray-600">{{ $similar->name }}</span>
                             </a>
                         </li>

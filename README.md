@@ -1,7 +1,7 @@
 # Proyecto INF 281
 
 <p>
-<a href="./">
+    <a href="./">
         <img src="https://img.shields.io/badge/version-v1.0.0-blue" alt="Versión">
     </a>
 </p>
@@ -11,8 +11,8 @@
 - [Laravel](https://typeorm.io/)
 - [MySql](https://www.mysql.org/)
 - [Eloquent](https://typeorm.io/)
-- [Docker](https://www.docker.com/)
-
+- [Laravel Collective]() Formularios
+- []() Permisos
 ## Documentación
 
 1. [Instalación y Configuración](INSTALL.md)
@@ -20,15 +20,6 @@
 
 ## Comandos útiles
 
-1. Ejecución de contenedor con instancia laravel
-   > Para instalar docker: [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
-
-   ```bash
-   sail
-   ```
-
-## Changelog
-
 ## Información de contacto
 
-- @navig11
+- @Navig11
