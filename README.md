@@ -1,8 +1,13 @@
-# Proyecto INF 281
+# TALLER DE SISTEMAS DE INFORMACION
+
+## Sitio Web contra la violencia Go Ahead 💜 !!!
 
 <p>
     <a href="./">
-        <img src="https://img.shields.io/badge/version-v1.0.0-blue" alt="Versión">
+        <img src="https://img.shields.io/badge/Version-v1.0.0-blue" alt="Versión">
+    </a>
+    <a href="./">
+        <img src="https://img.shields.io/badge/Asignatura-281-red" alt="Versión">
     </a>
 </p>
 
@@ -12,7 +17,8 @@
 - [MySql](https://www.mysql.org/)
 - [Eloquent](https://typeorm.io/)
 - [Laravel Collective]() Formularios
-- []() Permisos
+- [Spatie]() Permisos
+
 ## Documentación
 
 1. [Instalación y Configuración](INSTALL.md)

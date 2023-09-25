@@ -12,12 +12,14 @@
 
 ```bash
 # Clonación del proyecto
-git clone 
+git clone https://github.com/NaviG11/blog-laravel-proyect.git
 
 # Ingresamos dentro de la carpeta del proyecto
-cd 
+cd blog-laravel-proyect
 
 # Instalamos dependencias
+composer install
+npm install
 ```
 
 ### Archivos de configuración
@@ -30,42 +32,37 @@ cp .env.sample .env
 
 # Otros parámetros requeridos
 
+# Configuración para almacenamiento de archivos
+
+```bash
+php artisan storage:link
+```
+
+php artisan storage:link
+
 ```
 
 ## Configuración y migraciones de la Base de Datos
 
 ```bash
-# Crear los siguientes esquemas de base de datos:
-
+# Realizar las migraciones correspondientes
+php artisan migrate:fresh --seed
 ```
 
-Para más detalles ver el archivo [database/scripts/CREATE_DATABASE.md](./database/scripts/CREATE_DATABASE.md)
+<!-- Para más detalles ver el archivo [database/scripts/CREATE_DATABASE.md](./database/scripts/CREATE_DATABASE.md) -->
 
-```bash
-# Configura la base de datos.
-php migrate
-```
 
 ## Despliegue de la aplicación
 
 ```bash
 # Ejecución en modo desarrollo
-
+npm run dev
+php artisan serve
 # Ejecución en modo PRODUCCIÓN
 
 ```
 
 ## Comandos útiles para el modo desarrollo
-
-```bash
-# Verifica la sintaxis
-
-# Crea una nueva migración
-npm run seeds:create database/seeds/addColumnCategoria
-
-# Ejecuta las migraciones
-npm run seeds:run
-```
 
 ## Variables de entorno
 
@@ -78,9 +75,3 @@ npm run seeds:run
 | `DB_PASSWORD`            | ``        | contraseña de la base de datos.                                                                   |
 | `DB_DATABASE`            | `blog_db`     | nombre de la base de datos.                                                                       |
 | `DB_PORT`                | `3306`            | puerto de despliegue de la base de datos.                                                         |
-
-**Configuración para almacenamiento de archivos**
-
-```bash
-php artisan storage:link
-```
