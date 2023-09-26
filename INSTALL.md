@@ -4,7 +4,7 @@
 
 | Nombre       | Versión | Descripción                                            | Instalación                                      |
 |--------------|---------|--------------------------------------------------------|--------------------------------------------------|
-| `MySql` | ^14     | Gestor de base de datos.                               | <https://www.mysql> |
+| `MySql` | ^8.0     | Gestor de base de datos.                               | <https://www.mysql.com/> |
 
 ## 2. Instalación
 
@@ -33,13 +33,7 @@ cp .env.sample .env
 # Otros parámetros requeridos
 
 # Configuración para almacenamiento de archivos
-
-```bash
 php artisan storage:link
-```
-
-php artisan storage:link
-
 ```
 
 ## Configuración y migraciones de la Base de Datos
@@ -50,7 +44,6 @@ php artisan migrate:fresh --seed
 ```
 
 <!-- Para más detalles ver el archivo [database/scripts/CREATE_DATABASE.md](./database/scripts/CREATE_DATABASE.md) -->
-
 
 ## Despliegue de la aplicación
 
