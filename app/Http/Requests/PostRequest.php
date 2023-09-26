@@ -12,7 +12,6 @@ class PostRequest extends FormRequest
      */
     public function authorize()
     {
-        // return true;
         return true;
     }
 
@@ -23,7 +22,7 @@ class PostRequest extends FormRequest
      */
     public function rules()
     {
-
+        // Identificar post a actualizar
         $post = $this->route()->parameter('post');
 
         $rules = [
@@ -32,6 +31,7 @@ class PostRequest extends FormRequest
             'status' => 'required|in:1,2',
             'file' => 'image'
         ];
+        // Verifica que exista el post
         if($post){
             $rules['slug'] = 'required|unique:posts,slug,' . $post->id;
         }

@@ -51,7 +51,7 @@ class PostController extends Controller
         if ($request->tags) {
             $post->tags()->attach($request->tags);
         }
-        return redirect()->route('admin.posts.edit', $post);
+        return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se creó con éxito');
     }
 
 
@@ -68,6 +68,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        // Crear una referencia a la política
+        $this->authorize('author', $post);
+
         $categories = Category::pluck('name', 'id');
         $tags = Tag::all();
         return view('admin.posts.edit', compact('post', 'categories', 'tags'));
@@ -78,22 +81,27 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, Post $post)
     {
+        // Crear una referencia a la política
+        $this->authorize('author', $post);
+
         $post->update($request->all());
-        if($request->file('file')){
-            $url = Storage::put('posts', $request->file('file'));
-            if($post->image){
+        if ($request->file('file')) {
+            $url = Storage::put('public/posts', $request->file('file'));
+            if ($post->image) {
                 Storage::delete($post->image->url);
                 $post->image->update([
                     'url' => $url
                 ]);
-            }else{
+            } else {
                 $post->image()->create([
                     'url' => $url
                 ]);
             }
         }
+        // attach guarda los datos en la tabla intermedia
+        // sync actualiza los datos en la tabla intermedia
         if ($request->tags) {
-            $post->tags()->attach($request->tags);
+            $post->tags()->sync($request->tags);
         }
         return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se actualizó con éxito');
     }
@@ -103,6 +111,10 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+
+        // Crear una referencia a la política
+        $this->authorize('author', $post);
+        
         $post->delete();
 
         return redirect()->route('admin.posts.index')

@@ -20,7 +20,7 @@
         <div class="card-body">
 
             {!! Form::open(['route' => 'admin.posts.store', 'files' => true, 'autocomplete' => 'off']) !!}
-            {!! Form::hidden('user_id', auth()->user()->id) !!}
+            {{-- {!! Form::hidden('user_id', auth()->user()->id) !!} --}}
             {{-- INICIO FORMULARIO --}}
             @include('admin.posts.partials.form')
             {{-- FIN FORMULARIO --}}
