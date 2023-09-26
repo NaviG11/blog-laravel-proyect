@@ -36,9 +36,14 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
+
+        // return $request->file('file');
+        // En que carpeta dentro de la carpeta storage queremos guardar el archivo
+        // return Storage::put('public/posts', $request->file('file'));
         $post = Post::create($request->all());
         if ($request->file('file')) {
-            $url = Storage::put('posts', $request->file('file'));
+            $url = Storage::put('public/posts', $request->file('file'));
+            // relación post-image
             $post->image()->create([
                 'url' => $url
             ]);

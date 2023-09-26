@@ -27,8 +27,10 @@
             @include('admin.posts.partials.form')
 
             {{-- {!! Form::submit('Actualizar publicacion', ['class' => 'btn btn-primary']) !!} --}}
-            <button :class="{ danger: isDeleting }">
-                Submit
+            <button
+            type="submit"
+            class="btn btn-primary">
+                Actualizar publicación
             </button>
             {!! Form::close() !!}
         </div>

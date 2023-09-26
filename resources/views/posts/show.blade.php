@@ -11,8 +11,8 @@
             <div class="lg:col-span-2">
                 <figure>
                     @if ($post->image)
-                        <img class="w-full h-80 object-cover object-center" src="{{ Storage::url($post->image->url) }}"
-                            alt="{{ $post->name }}">
+                        <img class="w-full h-80 object-cover object-center rounded-lg"
+                            src="{{ Storage::url($post->image->url) }}" alt="{{ $post->name }}">
                     @else
                         <img class="w-full h-80 object-cover object-center rounded-lg"
                             src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
@@ -29,13 +29,13 @@
                 </h1>
                 <ul>
                     @foreach ($similares as $similar)
-                        <li class="mb-4">
+                        <li class="mb-5">
                             <a class="flex" href="{{ route('posts.show', $similar) }}">
                                 @if ($similar->image)
-                                    <img class="w-36 h-20 object-cover object-center"
+                                    <img class="w-40 h-35 object-cover object-center rounded-lg"
                                         src="{{ Storage::url($similar->image->url) }}" alt="{{ $similar->name }}">
                                 @else
-                                    <img class="w-48 h-36 object-cover object-center rounded-lg"
+                                    <img class="w-40 h-35 object-cover object-center rounded-lg"
                                         src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
                                         alt="">
                                 @endif

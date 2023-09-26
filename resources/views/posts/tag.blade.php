@@ -4,6 +4,7 @@
             Etiqueta: {{ $tag->name }}
         </h1>
         @foreach ($posts as $post)
+            {{-- Componente card-posts --}}
             <x-card-post :post="$post"/>
         @endforeach
         <div class="mt-4">

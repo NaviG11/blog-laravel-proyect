@@ -1,3 +1,4 @@
+{{-- Componente Card-Post --}}
 @props(['post'])
 <article class="mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
     @if ($post->image)
