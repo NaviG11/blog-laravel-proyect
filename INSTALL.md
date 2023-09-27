@@ -28,12 +28,13 @@ Crear los archivos de configuración con base en los archivos `sample` y modific
 
 ```bash
 # Variables de entorno globales
-cp .env.sample .env
+cp .env.example .env
 
 # Otros parámetros requeridos
 
 # Configuración para almacenamiento de archivos
 php artisan storage:link
+php artisan key:generate
 ```
 
 ## Configuración y migraciones de la Base de Datos
