@@ -5,7 +5,9 @@
         </div>
         @if ($users->count())
             
-        
+        <div>
+            <h1>prueba de titulo admin</h1>
+        </div>
         <div class="card-body">
             <table class="table table-striped">
                 <thead>
