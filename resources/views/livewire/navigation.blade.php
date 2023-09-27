@@ -1,4 +1,4 @@
-<nav class="bg-purple-600" x-data="{ open: false }">
+<nav  x-data="{ open: false }" style="background-image: url('https://img.freepik.com/fotos-premium/fondo-degradado-neon-desenfoque-color-resplandor-iluminacion-futurista-desenfocado-azul-purpura-rosa-luz_279525-28398.jpg'); background-size: cover;">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <!-- Mobile menu button-->
@@ -33,7 +33,9 @@
                         @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">{{ $category->name }}</a>
+                            
                         @endforeach
+                        <a href="{{ route('posts.category', $category) }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Formularios</a>
                     </div>
                 </div>
             </div>

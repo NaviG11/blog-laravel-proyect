@@ -10,7 +10,7 @@
                                 <a href="{{ route('posts.tag', $tag) }}" class="inline-block px-3 h-6 bg-{{ $tag->color }} text-white rounded-full">{{ $tag->name }}</a>
                             @endforeach
                         </div>
-                        <h1 class="text-4xl text-white leading-8 font-bold mt-2">
+                        <h1 class="text-4xl text-blue-100 leading-8 font-bold mt-2">
                             <a href="{{ route('posts.show', $post) }}">
                                 {{ $post->name }}
                             </a>
