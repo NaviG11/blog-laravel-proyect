@@ -13,17 +13,18 @@ use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('can:admin.posts.index')->only('index');
+        $this->middleware('can:admin.posts.create')->only('create', 'store');
+        $this->middleware('can:admin.posts.edit')->only('edit', 'update');
+        $this->middleware('can:admin.posts.destroy')->only('destroy');
+    }
     public function index()
     {
         return view('admin.posts.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $categories = Category::pluck('name', 'id');
@@ -31,9 +32,6 @@ class PostController extends Controller
         return view('admin.posts.create', compact('categories', 'tags'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(PostRequest $request)
     {
 
@@ -54,18 +52,6 @@ class PostController extends Controller
         return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se creó con éxito');
     }
 
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Post $post)
-    {
-        return view('admin.posts.show', compact('post'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Post $post)
     {
         // Crear una referencia a la política
@@ -76,9 +62,6 @@ class PostController extends Controller
         return view('admin.posts.edit', compact('post', 'categories', 'tags'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(PostRequest $request, Post $post)
     {
         // Crear una referencia a la política
@@ -106,9 +89,6 @@ class PostController extends Controller
         return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se actualizó con éxito');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Post $post)
     {
 

@@ -317,18 +317,20 @@ return [
             'icon'        => 'fa fa-tachometer-alt fa-fw',
             'label'       => 0,
             'label_color' => 'success',
+            'can'         => 'admin.home',
         ],
         [
             'text'        => 'Usuarios',
             'route'         => 'admin.users.index',
             'icon'        => 'fa fa-users fa-fw',
+            'can'           => 'admin.users.index',
         ],
-        ['header' => 'ADMINISTRADOR'],
         [
             'text' => 'Categorias',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
             'active' => ['admin/categories*'],
+            'can' => 'admin.categories.index',
         ],
         // Todo: Agregar link para la nueva pestaña de etiquetas
         [
@@ -337,6 +339,7 @@ return [
             'icon' => 'far fa-fw fa-bookmark',
             // Activar el menu cuando se encuentre en la ruta de tags
             'active' => ['admin/tags*'],
+            'can' => 'admin.tags.index',
         ],
         // [
         //     'text'    => 'Registros',
@@ -382,12 +385,14 @@ return [
             'route'        => 'admin.posts.index',
             'icon'      => 'fas fa-fw fa-clipboard-list',
             'icon_color' => 'red',
+            'can' => 'admin.posts.index',
         ],
         [
             'text'       => 'Crear nueva publicación',
             'route'        => 'admin.posts.create',
             'icon'      => 'fas fa-fw fa-file',
             'icon_color' => 'yellow',
+            'can' => 'admin.posts.create',
         ],
         // [
         //     'icon_color' => 'cyan',
