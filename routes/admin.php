@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\RoleController;
 
 // Route::get('', function () {
 //     return 'Bienvenido administrador';
@@ -27,3 +28,7 @@ Route::resource('tags', TagController::class)
 Route::resource('posts', PostController::class)
     ->except('show')
     ->names('admin.posts');
+
+Route::resource('roles', RoleController::class)
+    // ->except('show')
+    ->names('admin.roles');
