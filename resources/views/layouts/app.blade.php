@@ -40,12 +40,12 @@
             </div>
 
             <!-- Masthead-->
-            <header class="masthead bg-purple-400 text-white text-center">
+            <header class="masthead text-white text-center" style="background-color: rgba(162, 103, 138);">
                 <div class="container d-flex align-items-center flex-column">
                     <!-- Masthead Avatar Image-->
                     <img class="masthead-avatar mb-1" src="https://i.pinimg.com/originals/08/fe/42/08fe4272f6c32d4fa9d978a8a0db0606.png" alt="..." />
                     <!-- Masthead Heading-->
-                    <h1 class="masthead-heading text-uppercase mb-0">Alto al maltrato</h1>
+                    <h1 class="masthead-heading text-uppercase mb-0">Alto a la violencia</h1>
                     <!-- Icon Divider-->
                     <div class="divider-custom divider-light">
                         <div class="divider-custom-line"></div>
@@ -53,7 +53,7 @@
                         <div class="divider-custom-line"></div>
                     </div>
                     <!-- Masthead Subheading-->
-                    <p class="masthead-subheading font-weight-light mb-0">Contra la violencia a la mujer</p>
+                    <p class="masthead-subheading font-weight-light mb-0">Contra todo tipo de violencia</p>
                 </div>
             </header>
             
@@ -67,10 +67,10 @@
                 <!-- Footer -->
                 <footer class="text-center text-lg-start bg-white text-muted" >
                 <!-- Section: Social media -->
-                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="background-color: rgba(153, 0, 255);">
+                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom h-15" style="background-color: rgba(102, 37, 73);">
                     <!-- Left -->
                     <div class="me-5 d-none d-lg-block">
-                    <span>Conectate con nosotros a traves de las redes sociales:</span>
+                    <span class="text-cyan-50">Conectate con nosotros a traves de las redes sociales:</span>
                     </div>
                     <!-- Left -->
 
@@ -189,7 +189,7 @@
                 <!-- Section: Links  -->
 
                 <!-- Copyright -->
-                <div class="text-center p-4" style="background-color: rgba(153, 0, 255);">
+                <div class="text-center p-4 text-cyan-50" style="background-color: rgba(102, 37, 73);">
                     © 2023 Copyright:
                     <a class="text-reset fw-bold" href="https://www.paho.org/es/temas/violencia-contra-mujer">ViolenciaContraMujer.com</a>
                 </div>

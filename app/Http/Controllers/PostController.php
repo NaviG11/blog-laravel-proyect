@@ -12,13 +12,13 @@ class PostController extends Controller
 {
     public function index()
     {
-        if (Cache::has('posts')) {
-            $posts = Cache::get('posts');
-        } else {
-            $posts = Post::where('status', 2)->latest('id')->paginate(8);
-            Cache::put('posts', $posts);
-        }
-        // $posts = Post::where('status', 2)->latest('id')->paginate(8);
+        // if (Cache::has('posts')) {
+        //     $posts = Cache::get('posts');
+        // } else {
+        //     $posts = Post::where('status', 2)->latest('id')->paginate(8);
+        //     Cache::put('posts', $posts);
+        // }
+        $posts = Post::where('status', 2)->latest('id')->paginate(3);
         return view('posts.index', compact('posts'));
     }
     public function show(Post $post)
