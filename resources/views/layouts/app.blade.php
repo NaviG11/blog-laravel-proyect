@@ -35,32 +35,65 @@
         <div class="min-h-screen mt-0 bg-left justify-center" style="background-image: url('https://img.freepik.com/vector-gratis/fondo-textura-hoja-papel-arrugado-blanco_1017-31714.jpg'); background-size: cover;">
             @livewire('navigation')
             
-            <div>
-                
+            
+            <!--
+            -->
+            <!--PRUEBA DE CARRUSEL-->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+            
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://effortlesschic.cl/wp-content/uploads/2018/01/img_3127.jpg" class="d-block w-100" alt="Slide 1" style="height: 900px ;">
+
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="hestia-title">"Brilla como las estrellas que iluminan la noche. Eres fuerte, eres valiosa, eres única."</h5>
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://img.freepik.com/fotos-premium/mujer-brazos-levantados-al-fondo-atardecer_488220-76621.jpg?w=360" class="d-block w-100" alt="Slide 2" style="height: 900px;">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>"Eres lo suficientemente fuerte como para enfrentar los desafíos de la vida. Tienes el poder para superar cualquier obstáculo."</h5>
+                        
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://img.freepik.com/fotos-premium/imagen-generada-tecnologia-ia-mujer-meditando-junto-al-mar-al-atardecer_1112-13622.jpg" class="d-block w-100" alt="Slide 3" style="height: 900px;">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>"Eres lo suficientemente inteligente, lo suficientemente fuerte, lo suficientemente valiosa. Eres suficiente tal y como eres."</h5>
+                        
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
-            <!-- Masthead-->
-            <header class="masthead text-white text-center" style="background-color: rgba(162, 103, 138);">
-                <div class="container d-flex align-items-center flex-column">
-                    <!-- Masthead Avatar Image-->
-                    <img class="masthead-avatar mb-1" src="https://i.pinimg.com/originals/08/fe/42/08fe4272f6c32d4fa9d978a8a0db0606.png" alt="..." />
-                    <!-- Masthead Heading-->
-                    <h1 class="masthead-heading text-uppercase mb-0">Alto a la violencia</h1>
-                    <!-- Icon Divider-->
-                    <div class="divider-custom divider-light">
-                        <div class="divider-custom-line"></div>
-                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <div class="divider-custom-line"></div>
-                    </div>
-                    <!-- Masthead Subheading-->
-                    <p class="masthead-subheading font-weight-light mb-0">Contra todo tipo de violencia</p>
-                </div>
-            </header>
+
+            <!--PRUEBA DE CARRUSEL-->
+            <!--
+                
+            -->
+
             
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+            
 
             <!-- Footer -->
             <div>
