@@ -93,7 +93,9 @@
 
             
             <!-- Page Content -->
-            
+            <main>
+                {{ $slot }}
+            </main>
 
             <!-- Footer -->
             <div>
