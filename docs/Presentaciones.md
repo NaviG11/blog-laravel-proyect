@@ -2,9 +2,10 @@
 
 ## 3 de octubre
 
-CRUD's
+- [ ] Eventos           admin
+- [ ] Centros locales   admin
 
-- Eventos
-- Centros locales
-- Articculo o leyes
-- Educativo
+### Blog - Post
+
+- [ ] Articculo o leyes admin
+- [ ] Educativo         admin
