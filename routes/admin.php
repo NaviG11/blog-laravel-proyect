@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ArticleController;
-use App\Http\Controllers\Admin\LawController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\TagController;
@@ -27,9 +26,7 @@ Route::resource('articles', ArticleController::class)
     ->except('show')
     ->names('admin.articles');
 
-Route::resource('laws', LawController::class)
-    ->except('show')
-    ->names('admin.laws');
+
 
 Route::resource('tags', TagController::class)
     ->except('show')

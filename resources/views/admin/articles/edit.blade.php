@@ -18,7 +18,7 @@
     <div class="card">
         <div class="card-body">
             {{-- Form::model(variable, ) --}}
-            {!! Form::model($category, ['route' => ['admin.article.update', $article], 'method' => 'put']) !!}
+            {!! Form::model($article, ['route' => ['admin.articles.update', $article], 'method' => 'put']) !!}
             <div class="form-group">
                 {!! Form::label('name', 'Nombre') !!}
                 {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre']) !!}
@@ -30,10 +30,11 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('slug', 'Slug') !!}
-                {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el slug', 'readonly']) !!}
+                {!! Form::label('name', 'Nombre') !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre']) !!}
+
                 {{-- Error de validación --}}
-                @error('slug')
+                @error('name')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>

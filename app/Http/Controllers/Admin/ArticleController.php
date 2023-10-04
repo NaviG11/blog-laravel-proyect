@@ -31,11 +31,7 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-        // Validación
-        $request->validate([
-            'name' => 'required',
-            'slug' => 'required|unique:categories'
-        ]);
+        
 
         // return $request->all();
         $article = Article::create($request->all());
@@ -53,10 +49,9 @@ class ArticleController extends Controller
         //Validación
         $request->validate([
             'name' => 'required',
-            'slug' => "required|unique:articles,slug,$article->id"
         ]);
         // Actualizar información
-        $category->update($request->all());
+        $article->update($request->all());
         // Redireccionar
         return redirect()->route('admin.articles.edit', $article)->with('info', 'El articulo se actualizó con éxito');
     }

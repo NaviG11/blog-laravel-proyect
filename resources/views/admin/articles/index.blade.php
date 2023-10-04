@@ -5,7 +5,7 @@
 @section('content_header')
 
     {{--@can('admin.articles.create')--}}
-        <a class="btn btn-secondary btn-sm float-right" href="{{ route('admin.articles.create') }}">Agregar Articulo</a>
+    <a class="btn btn-secondary btn-sm float-right" href="{{ route('admin.articles.create') }}">Agregar Articulo</a>
     {{--@endcan--}}
     <h1>Listar Articulos</h1>
 @stop
@@ -28,6 +28,10 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
+                        <th>Fecha Promulgacion</th>
+                        <th>Tipo</th>
+                        <th>Descripcion</th>
+                        <th>Ambito De Aplicacion</th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
@@ -36,6 +40,11 @@
                         <tr>
                             <td>{{ $article->id }}</td>
                             <td>{{ $article->name }}</td>
+                            <td>{{ $article->fecha_promulagacion }}</td>
+                            <td>{{ $article->tipo }}</td>
+                            <td>{{ $article->descripcion }}</td>
+                            <td>{{ $article->ambito_aplicacion }}</td>
+                           
                             <td width="10px">
                                 {{-- @can('admin.articles.edit') --}}
                                     <a class="btn btn-primary btn-sm"
