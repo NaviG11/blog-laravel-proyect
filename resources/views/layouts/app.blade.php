@@ -64,7 +64,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://effortlesschic.cl/wp-content/uploads/2018/01/img_3127.jpg" class="d-block w-100"
-                        alt="Slide 1" style="height: 750px ;">
+                        alt="Slide 1" style="height: 700px ;">
 
 
                     <div class="carousel-caption d-none d-md-block">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="https://img.freepik.com/fotos-premium/mujer-brazos-levantados-al-fondo-atardecer_488220-76621.jpg?w=360"
-                        class="d-block w-100" alt="Slide 2" style="height: 750px;">
+                        class="d-block w-100" alt="Slide 2" style="height: 700px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>"Eres lo suficientemente fuerte como para enfrentar los desafíos de la vida. Tienes el poder
                             para superar cualquier obstáculo."</h5>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="https://img.freepik.com/fotos-premium/imagen-generada-tecnologia-ia-mujer-meditando-junto-al-mar-al-atardecer_1112-13622.jpg"
-                        class="d-block w-100" alt="Slide 3" style="height: 750px;">
+                        class="d-block w-100" alt="Slide 3" style="height: 700px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>"Eres lo suficientemente inteligente, lo suficientemente fuerte, lo suficientemente valiosa.
                             Eres suficiente tal y como eres."</h5>
