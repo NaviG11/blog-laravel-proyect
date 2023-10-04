@@ -338,6 +338,20 @@ return [
             'active' => ['admin/categories*'],
             'can' => 'admin.categories.index',
         ],
+        [
+            'text' => 'Articulos',
+            'route'  => 'admin.articles.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            //'active' => ['admin/articles*'],
+            //'can' => 'admin.articles.index',
+        ],
+        [
+            'text' => 'Leyes',
+            'route'  => 'admin.laws.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            //'active' => ['admin/laws*'],
+            //'can' => 'admin.laws.index',
+        ],
         // Todo: Agregar link para la nueva pestaña de etiquetas
         [
             'route'  => 'admin.tags.index',
