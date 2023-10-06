@@ -9,6 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
+            
             {!! Form::open(['route' => 'admin.articles.store']) !!}
             <div class="form-group">
                 {!! Form::label('name', 'Nombre') !!}
@@ -21,21 +22,22 @@
             </div>
         
             <div class="form-group">
+                {{-- Añadir tipo de input DATE --}}
                 {!! Form::label('fecha_promulagacion', 'Fecha de Promulgacion') !!}
                 {!! Form::text('fecha_promulagacion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la fecha de promulgacion']) !!}
 
                 {{-- Error de validación --}}
-                @error('name')
+                @error('fecha_promulagacion')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 {!! Form::label('tipo', 'Tipo') !!}
-                {!! Form::text('tipo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el tipo de Articulo']) !!}
+                {!! Form::text('tipo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el tipo de Artículo']) !!}
 
                 {{-- Error de validación --}}
-                @error('name')
+                @error('tipo')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
@@ -45,7 +47,7 @@
                 {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la Descripcion del Articulo']) !!}
 
                 {{-- Error de validación --}}
-                @error('name')
+                @error('descripcion')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
@@ -55,7 +57,7 @@
                 {!! Form::text('ambito_aplicacion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el ambito de aplicacion']) !!}
 
                 {{-- Error de validación --}}
-                @error('name')
+                @error('ambito_aplicacion')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
@@ -66,15 +68,3 @@
     </div>
 @stop
 
-@section('js')
-    <script src="{{ asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#name").stringToSlug({
-                setEvents: 'keyup keydown blur',
-                getPut: '#slug',
-                space: '-'
-            });
-        });
-    </script>
-@endsection
