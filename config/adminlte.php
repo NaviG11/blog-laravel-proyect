@@ -338,6 +338,15 @@ return [
             'active' => ['admin/categories*'],
             'can' => 'admin.categories.index',
         ],
+
+        [
+            'text' => 'Centros Locales',
+           // 'route'  => 'admin.localCenters.index',
+            'icon' => 'fab fa-fw fa-buffer',
+           // 'active' => ['admin/centros*'],
+           // 'can' => 'admin.centrosLocales.index',
+        ],
+        
         [
             'text' => 'Articulos',
             'route'  => 'admin.articles.index',
