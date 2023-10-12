@@ -1,5 +1,5 @@
 <nav x-data="{ open: false }"
-    style="background-image: url('https://img.freepik.com/fotos-premium/fondo-degradado-neon-desenfoque-color-resplandor-iluminacion-futurista-desenfocado-azul-purpura-rosa-luz_279525-28398.jpg'); background-size: cover;">
+    style="background: #4568DC; background: -webkit-linear-gradient(to right, #B06AB3, #4568DC); background: linear-gradient(to right, #B06AB3, #4568DC);">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <!-- Mobile menu button-->
@@ -102,15 +102,15 @@
 
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
-                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        {{-- <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                            aria-current="page">Dashboard</a> --}}
+                        {{-- route('forms.index') --}}
+                        <a href=""
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">TEST</a>
+                        <a href="{{ route('documents.index') }}"
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">DOCUMENTOS</a>
                         @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
-                                class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
+                                class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
                         @endforeach
-                        <a href="{{ route('posts.category', $category) }}"
-                            class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Formularios</a>
                     </div>
                 </div>
             </div>
@@ -118,16 +118,7 @@
             @auth
                 {{-- Menu --}}
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <button type="button"
-                        class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">View notifications</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                        </svg>
-                    </button>
+
                     {{-- x-show="open" x-on:click.away="open = false" --}}
                     <!-- Profile dropdown -->
                     <div class="relative ml-3" x-data="{ open: false }">
@@ -137,7 +128,7 @@
                                 id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">Open user menu</span>
-                                <img class="h-8 w-8 rounded-full" src="{{ auth()->user()->profile_photo_url }}"
+                                <img class="h-12 w-12 rounded-full" src="{{ auth()->user()->profile_photo_url }}"
                                     alt="">
                             </button>
                         </div>
@@ -145,15 +136,16 @@
                             class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                             tabindex="-1">
-                            <a href="{{ route('profile.show') }}" class="block px-4 py-2 text-sm text-gray-700"
-                                role="menuitem" tabindex="-1" id="user-menu-item-0">Tu perfil</a>
+                            <a href="{{ route('profile.show') }}"
+                                class="no-underline block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                id="user-menu-item-0">Tu perfil</a>
                             @can('admin.home')
-                                <a href="{{ route('admin.home') }}" class="block px-4 py-2 text-sm text-gray-700"
+                                <a href="{{ route('admin.home') }}" class="no-underline block px-4 py-2 text-sm text-gray-700"
                                     role="menuitem" tabindex="-1" id="user-menu-item-0">Dashboard</a>
                             @endcan
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf
-                                <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700"
+                                <a href="{{ route('logout') }}" class="no-underline block px-4 py-2 text-sm text-gray-700"
                                     role="menuitem" tabindex="-1" id="user-menu-item-2"
                                     @click.prevent="$root.submit();">Cerrar sesión</a>
                             </form>
@@ -161,16 +153,34 @@
                     </div>
                 </div>
             @else
-                <div>
-                    <a href="{{ route('login') }}"
-                        class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Login</a>
-                    <a href="{{ route('register') }}"
-                        class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Register</a>
+                <div class="d-flex justify-content-center">
+                    <div class="d-none d-md-flex"> <!-- Mostrar en dispositivos medianos y más grandes -->
+                        <a href="{{ route('login') }}"
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">LOG
+                            IN</a>
+                        <a href="{{ route('register') }}"
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">REGISTER</a>
+                    </div>
+
+                    <div class="d-md-none"> <!-- Mostrar en dispositivos más pequeños (móviles) -->
+                        <a href="{{ route('login') }}"
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">
+                            <i class="fas fa-sign-in-alt"></i> <!-- Icono de inicio de sesión -->
+                        </a>
+                        <a href="{{ route('register') }}"
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">
+                            <i class="fas fa-user-plus"></i> <!-- Icono de registro -->
+                        </a>
+                    </div>
                 </div>
+
             @endauth
         </div>
+        {{-- <hr>
+        <div class="flex space-x-4">
+            
+        </div> --}}
     </div>
-
     <!-- Mobile menu, show/hide based on menu state. -->
     {{-- menu movil --}}
     <div class="sm:hidden" id="mobile-menu" x-show="open" x-on:click.away="open=false">
@@ -178,6 +188,10 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             {{-- <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
                 aria-current="page">Dashboard</a> --}}
+            <a href=""
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Test</a>
+            <a href="{{ route('documents.index') }}"
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Documentos</a>
             @foreach ($categories as $category)
                 <a href="{{ route('posts.category', $category) }}"
                     class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ $category->name }}</a>

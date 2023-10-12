@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\DocumentController;
 
 // Route::get('', function () {
 //     return 'Bienvenido administrador';
@@ -38,3 +39,9 @@ Route::resource('roles', RoleController::class)
 Route::resource('articles', ArticleController::class)
     ->except('show')
     ->names('admin.articles');
+
+// Route::resource('documents', DocumentController::class)
+//     // ->only(['index', 'edit', 'update'])
+//     ->names('admin.documents');
+Route::resource('documents', DocumentController::class)
+	->names('admin.documents');

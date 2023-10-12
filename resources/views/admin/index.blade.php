@@ -7,11 +7,12 @@
 @stop
 
 @section('content')
-    <p>Bienvenido.</p>
+    <p>Bienvenido Ivan</p>
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+    {{-- Agregar estilos al body --}}
+    
 @stop
 
 @section('js')

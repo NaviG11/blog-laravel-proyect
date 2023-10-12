@@ -408,6 +408,18 @@ return [
             'icon_color' => 'yellow',
             'can' => 'admin.posts.create',
         ],
+        [
+            'text' => 'Archivos',
+            'route' => 'admin.documents.index',
+            'icon' => 'fas fa-fw fa-clipboard'
+        ],
+        // [
+        //     'text'       => 'Subir Documento',
+        //     'route'        => 'admin.documents.create',
+        //     'icon'      => 'fas fa-fw fa-file',
+        //     'icon_color' => 'purple',
+        //     // 'can' => 'admin.posts.create',
+        // ],
         // [
         //     'icon_color' => 'cyan',
         //     'text'       => 'Información',
