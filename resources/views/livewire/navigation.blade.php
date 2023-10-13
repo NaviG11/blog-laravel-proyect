@@ -111,21 +111,23 @@
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Reglamentos</a>
                         <a href="http://localhost/PROY%20OCTUBRE/PROY%20OCTUBRE/formularioDenuncia.php"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Denuncia</a>
-                        <a href=""
+                        <a href="{{ route('evento.index') }}"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Eventos</a>
                         {{-- @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
                                 class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
                         @endforeach --}}
-                        <div class="relative group">
+                        <div class="relative group mt-2">
                             <a href="#"
                                 class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Categories</a>
-                            <div class="absolute hidden no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">
+                            <div class="absolute hidden no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold"
+                                style="z-index: 999;">
                                 @foreach ($categories as $category)
                                     <a href="{{ route('posts.category', $category) }}"
                                         class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
                                 @endforeach
                             </div>
+
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\CenterController;
+use App\Http\Controllers\Admin\EventoController;
 
 // Route::get('', function () {
 //     return 'Bienvenido administrador';
@@ -40,6 +41,9 @@ Route::resource('roles', RoleController::class)
 Route::resource('articles', ArticleController::class)
     ->except('show')
     ->names('admin.articles');
+
+Route::resource('evento', EventoController::class)
+    ->names('admin.evento');
 
 // Route::resource('documents', DocumentController::class)
 //     // ->only(['index', 'edit', 'update'])
