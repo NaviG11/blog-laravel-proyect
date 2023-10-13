@@ -112,6 +112,8 @@
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Reglamentos</a>
                         <a href=""
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Denuncia</a>
+                        <a href=""
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Eventos</a>
                         @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
                                 class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
@@ -202,6 +204,8 @@
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Reglamentos</a>
             <a href=""
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Denuncia</a>
+            <a href=""
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Eventos</a>
             @foreach ($categories as $category)
                 <a href="{{ route('posts.category', $category) }}"
                     class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ $category->name }}</a>

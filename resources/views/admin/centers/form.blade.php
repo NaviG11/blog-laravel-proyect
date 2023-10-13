@@ -57,6 +57,11 @@
     <input type="text" class="form-control" name="Correo"
         value="{{ isset($centro->Correo) ? $centro->Correo : old('Correo') }}" id="Correo">
 </div>
+<div class="form-group">
+    <label for="Web">Web</label>
+    <input type="text" class="form-control" name="Web"
+        value="{{ isset($centro->Web) ? $centro->Web : old('Web') }}" id="Web">
+</div>
 <br />
 <input class="btn btn-success " type="submit" value="{{ $modo }} Datos">
 <a class="btn btn-primary" href="{{ url('admin/centers/') }}">Regresar</a>
