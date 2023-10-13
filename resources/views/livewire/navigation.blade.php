@@ -104,11 +104,14 @@
                     <div class="flex space-x-4">
                         {{-- route('forms.index') --}}
                         <a href="{{ route('centers.index') }}"
-                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Centros de apoyo</a>
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Centros
+                            de ayuda</a>
                         <a href=""
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Cuestionario</a>
                         <a href="{{ route('documents.index') }}"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Reglamentos</a>
+                        <a href=""
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Denuncia</a>
                         @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
                                 class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
@@ -190,15 +193,19 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             {{-- <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
                 aria-current="page">Dashboard</a> --}}
+            <a href="{{ route('centers.index') }}"
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Centros
+                de ayuda</a>
             <a href=""
-                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Test</a>
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Cuestionario</a>
             <a href="{{ route('documents.index') }}"
-                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Documentos</a>
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Reglamentos</a>
+            <a href=""
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Denuncia</a>
             @foreach ($categories as $category)
                 <a href="{{ route('posts.category', $category) }}"
                     class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ $category->name }}</a>
             @endforeach
-
         </div>
     </div>
 </nav>
