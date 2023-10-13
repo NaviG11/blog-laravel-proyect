@@ -15,15 +15,28 @@
                                     Descripción</th>
                                 <th
                                     class="px-6 py-3 border-b border-gray-200 text-left text-sm font-semibold text-gray-600 uppercase">
-                                    Tipo</th>
+                                    Ubicación</th>
+                                <th
+                                    class="px-6 py-3 border-b border-gray-200 text-left text-sm font-semibold text-gray-600 uppercase">
+                                    Ciudad</th>
+                                <th
+                                    class="px-6 py-3 border-b border-gray-200 text-left text-sm font-semibold text-gray-600 uppercase">
+                                    Web</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($centers as $document)
                                 <tr>
-                                    <td class="px-6 py-4 border-b border-gray-200">{{ $document->nombre }}</td>
-                                    <td class="px-6 py-4 border-b border-gray-200">{{ $document->ubicacion }}</td>
-                                    <td class="px-6 py-4 border-b border-gray-200">{{ $document->correo }}</td>
+                                    <td class="px-6 py-4 border-b border-gray-200">{{ $document->Nombre }}</td>
+                                    <td class="px-6 py-4 border-b border-gray-200">{{ $document->Descripcion }}</td>
+                                    <td class="px-6 py-4 border-b border-gray-200">{{ $document->Ubicacion }}</td>
+                                    <td class="px-6 py-4 border-b border-gray-200">{{ $document->Ciudad }}</td>
+                                    <td class="px-6 py-4 border-b border-gray-200">
+                                        <a href="{{ $document->Correo }}"
+                                            class="text-blue-500 hover:text-blue-700 hover:underline">
+                                            {{ $document->Correo }}
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

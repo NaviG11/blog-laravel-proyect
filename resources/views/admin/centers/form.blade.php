@@ -1,7 +1,5 @@
-<h1>{{ $modo }} Centro Local </h1>
-
+<h1>{{ $modo }} Centro de ayuda </h1>
 @if (count($errors) > 0)
-
     <div class="alert alert-danger" role="alert">
         <ul>
             @foreach ($errors->all() as $error)
@@ -11,15 +9,10 @@
     </div>
 @endif
 
-
-
-
 <div class="form-group">
-
     <label for="Nombre">Nombre</label>
     <input type="text" class="form-control" name="Nombre"
         value="{{ isset($centro->Nombre) ? $centro->Nombre : old('Nombre') }}" id="Nombre">
-
 </div>
 
 <div class="form-group">
@@ -29,7 +22,6 @@
             alt="">
     @endif
     <input type="file" class="form-control" name="Logo" value="" id="Logo">
-
 </div>
 
 
@@ -64,14 +56,8 @@
     <label for="Correo">Correo</label>
     <input type="text" class="form-control" name="Correo"
         value="{{ isset($centro->Correo) ? $centro->Correo : old('Correo') }}" id="Correo">
-
 </div>
-
 <br />
-
 <input class="btn btn-success " type="submit" value="{{ $modo }} Datos">
-
-
 <a class="btn btn-primary" href="{{ url('admin/centers/') }}">Regresar</a>
-
 <br>

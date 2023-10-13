@@ -49,3 +49,6 @@ Route::resource('documents', DocumentController::class)
 
 Route::resource('centers', CenterController::class)
     ->names('admin.centers');
+
+// Route::resource('centers', CenterController::class)
+// ->names('admin.centers');

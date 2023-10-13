@@ -1,5 +1,8 @@
 @extends('adminlte::page')
 @section('title', 'Dashboard')
+@section('content_header')
+    <h1>Centro de apoyo</h1>
+@stop
 @section('content')
     <div class="container">
         @if (Session::has('mensaje'))
@@ -28,20 +31,15 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
-
             <tbody>
                 @foreach ($centros as $centro)
                     <tr>
-
                         <td>{{ $centro->id }}</td>
                         <td>{{ $centro->Nombre }}</td>
-
                         <td>
                             <img class="img-thumbnail img-fluid" src="{{ asset('storage') . '/' . $centro->Logo }}"
                                 width="150" alt="150">
-
                         </td>
-
                         <td>{{ $centro->Descripcion }}</td>
                         <td>{{ $centro->Ubicacion }}</td>
                         <td>{{ $centro->Ciudad }}</td>
@@ -63,14 +61,4 @@
             </tbody>
         </table>
     </div>
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script>
-        console.log('Hi!');
-    </script>
 @stop
