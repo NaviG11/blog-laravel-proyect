@@ -102,7 +102,6 @@
 
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
-                        {{-- route('forms.index') --}}
                         <a href="{{ route('centers.index') }}"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Centros
                             de ayuda</a>
@@ -114,14 +113,23 @@
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Denuncia</a>
                         <a href=""
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Eventos</a>
-                        @foreach ($categories as $category)
+                        {{-- @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
                                 class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
-                        @endforeach
+                        @endforeach --}}
+                        <div class="relative group">
+                            <a href="#"
+                                class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Categories</a>
+                            <div class="absolute hidden no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">
+                                @foreach ($categories as $category)
+                                    <a href="{{ route('posts.category', $category) }}"
+                                        class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
             @auth
                 {{-- Menu --}}
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -183,18 +191,12 @@
 
             @endauth
         </div>
-        {{-- <hr>
-        <div class="flex space-x-4">
-            
-        </div> --}}
+
     </div>
     <!-- Mobile menu, show/hide based on menu state. -->
     {{-- menu movil --}}
     <div class="sm:hidden" id="mobile-menu" x-show="open" x-on:click.away="open=false">
         <div class="space-y-1 px-2 pb-3 pt-2">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            {{-- <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-                aria-current="page">Dashboard</a> --}}
             <a href="{{ route('centers.index') }}"
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Centros
                 de ayuda</a>
@@ -213,3 +215,12 @@
         </div>
     </div>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var categoryDropdown = document.querySelector('.group');
+        categoryDropdown.addEventListener('click', function() {
+            var dropdownMenu = this.querySelector('.absolute');
+            dropdownMenu.classList.toggle('hidden');
+        });
+    });
+</script>
