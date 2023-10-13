@@ -109,10 +109,18 @@
                             <a href="{{ route('posts.category', $category) }}"
                                 class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
                         @endforeach
+
                         <a href="{{ route('posts.category', $category) }}"
                             class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Formularios</a>
+                        
+                        <a href="{{ route('posts.category', $category) }}"
+                            class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Cuestionario</a>
+                    
                     </div>
                 </div>
+
+                
+
             </div>
 
             @auth
