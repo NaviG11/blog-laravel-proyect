@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\DocumentController;
+use App\Http\Controllers\Admin\CenterController;
 
 // Route::get('', function () {
 //     return 'Bienvenido administrador';
@@ -44,4 +45,7 @@ Route::resource('articles', ArticleController::class)
 //     // ->only(['index', 'edit', 'update'])
 //     ->names('admin.documents');
 Route::resource('documents', DocumentController::class)
-	->names('admin.documents');
+    ->names('admin.documents');
+
+Route::resource('centers', CenterController::class)
+    ->names('admin.centers');

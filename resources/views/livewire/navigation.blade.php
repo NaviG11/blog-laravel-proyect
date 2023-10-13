@@ -103,10 +103,12 @@
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
                         {{-- route('forms.index') --}}
+                        <a href="{{ route('centers.index') }}"
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Centros de apoyo</a>
                         <a href=""
-                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">TEST</a>
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Cuestionario</a>
                         <a href="{{ route('documents.index') }}"
-                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">DOCUMENTOS</a>
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Reglamentos</a>
                         @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
                                 class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
