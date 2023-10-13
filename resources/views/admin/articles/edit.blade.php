@@ -30,12 +30,32 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('name', 'Nombre') !!}
-                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre']) !!}
+                {!! Form::label('tipo', 'Tipo') !!}
+                {!! Form::text('tipo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el tipo de Articulo']) !!}
 
                 {{-- Error de validación --}}
                 @error('name')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('descripcion', 'Descripcion') !!}
+                {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la Descripcion del Articulo']) !!}
+
+                {{-- Error de validación --}}
+                @error('name')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('ambito_aplicacion', 'Ambito de Aplicacion') !!}
+                {!! Form::text('ambito_aplicacion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el ambito de aplicacion']) !!}
+
+                {{-- Error de validación --}}
+                @error('name')
+                    <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
 

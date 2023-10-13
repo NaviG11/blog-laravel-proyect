@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
-    protected $fillable = ['name'];
+    protected $fillable = ['name','tipo','descripcion','ambito_aplicacion'];
     /*
     public function getRouteKeyName()
     {
@@ -19,4 +19,5 @@ class Article extends Model
     public function posts(){
         return $this->hasMany(Post::class);
     }*/
+   
 }

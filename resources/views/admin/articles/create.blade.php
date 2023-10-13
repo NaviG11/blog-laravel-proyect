@@ -19,17 +19,7 @@
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
-        
-            <div class="form-group">
-                {!! Form::label('fecha_promulagacion', 'Fecha de Promulgacion') !!}
-                {!! Form::text('fecha_promulagacion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la fecha de promulgacion']) !!}
-
-                {{-- Error de validación --}}
-                @error('name')
-                    <span class="text-danger">{{$message}}</span>
-                @enderror
-            </div>
-
+    
             <div class="form-group">
                 {!! Form::label('tipo', 'Tipo') !!}
                 {!! Form::text('tipo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el tipo de Articulo']) !!}
