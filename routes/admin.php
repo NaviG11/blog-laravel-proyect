@@ -22,11 +22,6 @@ Route::resource('categories', CategoryController::class)
     ->except('show')
     ->names('admin.categories');
 
-Route::resource('articles', ArticleController::class)
-    ->except('show')
-    ->names('admin.articles');
-
-
 
 Route::resource('tags', TagController::class)
     ->except('show')
@@ -39,3 +34,7 @@ Route::resource('posts', PostController::class)
 Route::resource('roles', RoleController::class)
     // ->except('show')
     ->names('admin.roles');
+
+Route::resource('articles', ArticleController::class)
+    ->except('show')
+    ->names('admin.articles');

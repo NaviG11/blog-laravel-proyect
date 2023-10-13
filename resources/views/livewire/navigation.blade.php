@@ -5,7 +5,7 @@
             <!-- Mobile menu button-->
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden shadow">
                 <button x-on:click="open=true" type="button"
-                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-purple-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     aria-controls="mobile-menu" aria-expanded="false">
                     <span class="absolute -inset-0.5"></span>
                     <span class="sr-only">Open main menu</span>
@@ -107,10 +107,10 @@
                             aria-current="page">Dashboard</a> --}}
                         @foreach ($categories as $category)
                             <a href="{{ route('posts.category', $category) }}"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
+                                class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">{{ $category->name }}</a>
                         @endforeach
                         <a href="{{ route('posts.category', $category) }}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Formularios</a>
+                            class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Formularios</a>
                     </div>
                 </div>
             </div>
@@ -163,9 +163,9 @@
             @else
                 <div>
                     <a href="{{ route('login') }}"
-                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</a>
+                        class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Login</a>
                     <a href="{{ route('register') }}"
-                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</a>
+                        class="text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Register</a>
                 </div>
             @endauth
         </div>
@@ -180,7 +180,7 @@
                 aria-current="page">Dashboard</a> --}}
             @foreach ($categories as $category)
                 <a href="{{ route('posts.category', $category) }}"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ $category->name }}</a>
+                    class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ $category->name }}</a>
             @endforeach
 
         </div>

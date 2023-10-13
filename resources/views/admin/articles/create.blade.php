@@ -9,6 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
+            
             {!! Form::open(['route' => 'admin.articles.store']) !!}
             <div class="form-group">
                 {!! Form::label('name', 'Nombre') !!}
@@ -22,10 +23,10 @@
     
             <div class="form-group">
                 {!! Form::label('tipo', 'Tipo') !!}
-                {!! Form::text('tipo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el tipo de Articulo']) !!}
+                {!! Form::text('tipo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el tipo de Artículo']) !!}
 
                 {{-- Error de validación --}}
-                @error('name')
+                @error('tipo')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
@@ -35,7 +36,7 @@
                 {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la Descripcion del Articulo']) !!}
 
                 {{-- Error de validación --}}
-                @error('name')
+                @error('descripcion')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
@@ -45,7 +46,7 @@
                 {!! Form::text('ambito_aplicacion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el ambito de aplicacion']) !!}
 
                 {{-- Error de validación --}}
-                @error('name')
+                @error('ambito_aplicacion')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
@@ -56,15 +57,3 @@
     </div>
 @stop
 
-@section('js')
-    <script src="{{ asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#name").stringToSlug({
-                setEvents: 'keyup keydown blur',
-                getPut: '#slug',
-                space: '-'
-            });
-        });
-    </script>
-@endsection
