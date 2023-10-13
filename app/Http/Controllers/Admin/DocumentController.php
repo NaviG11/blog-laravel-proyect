@@ -29,23 +29,7 @@ class DocumentController extends Controller
     {
         return view('admin.documents.edit', compact('document'));
     }
-    // public function store(Request $request)
-    // {
-    //     $name = $request->file('file')->getClientOriginalName();
-    //     $path = $request->file('file')->store('public/documents');
 
-    //     $array = explode('public/documents', $path);
-
-    //     $save = new Document;
-    //     $save->name = $name;
-    //     $save->path = 'storage/documents' . $array[1];
-    //     $save->description = 'desctiption';
-    //     $save->file = $path;
-    //     $save->save();
-
-    //     return redirect()->route('admin.documents.create')
-    //         ->with('info', 'El document se creó con éxito');
-    // }
     public function store(Request $request)
     {
         $file = $request->file('file');

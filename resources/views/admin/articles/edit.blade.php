@@ -58,25 +58,21 @@
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
+            {{-- Un input tipo file --}}
+            {{-- <div class="form-group">
+                {!! Form::label('file', 'Documento') !!}
+                {!! Form::file('file', ['class' => 'form-control-file']) !!}
+            </div> --}}
+            <div class="form-group">
+                {!! Form::label('file', 'Documento que se mostrará en la publicación') !!}
+                {!! Form::file('file', ['class' => 'form-control-file']) !!}
+                @error('file')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
 
             {!! Form::submit('Actualizar', ['class' => 'btn btn-primary']) !!}
             {!! Form::close() !!}
         </div>
     </div>
 @stop
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script src="{{ asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#name").stringToSlug({
-                setEvents: 'keyup keydown blur',
-                getPut: '#slug',
-                space: '-'
-            });
-        });
-    </script>
-@endsection

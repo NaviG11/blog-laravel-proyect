@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\DocumentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\CenterController;
 Route::get('/', [PostController::class, 'index'])->name('posts.index');
 
 Route::resource('/documents', DocumentController::class);
+Route::resource('/articles', ArticleController::class);
 Route::resource('/centers', CenterController::class);
 
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');

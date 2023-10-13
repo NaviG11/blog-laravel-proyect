@@ -8,19 +8,9 @@ use App\Models\Article;
 
 class ArticleController extends Controller
 {
-    /*
-    public function __construct()
-    {
-        $this->middleware('can:admin.articles.index')->only('index');
-        $this->middleware('can:admin.articles.create')->only('create', 'store');
-        $this->middleware('can:admin.articles.edit')->only('edit', 'update');
-        $this->middleware('can:admin.articles.destroy')->only('destroy');
-    }*/
-
     public function index()
     {
         $articles = Article::all();
-        //return $articles;
         return view('admin.articles.index', compact('articles'));
     }
 
@@ -30,14 +20,27 @@ class ArticleController extends Controller
     }
 
     public function store(Request $request)
+
     {
-        
-
-        // return $request->all();
-        $article = Article::create($request->all());
-        return redirect()->route('admin.articles.edit', $article)->with('info', 'El articulo se creó con éxito');
+        // $article = Article::create($request->all());
+        $file = $request->file('file');
+        if ($file) {
+            $name = $file->getClientOriginalName();
+            $path = $file->store('public/documents');
+            $array = explode('public/documents', $path);
+            $save = new Article;
+            $save->name = $name;
+            $save->tipo = $request->tipo;
+            $save->descripcion = $request->descripcion;
+            $save->ambito_aplicacion = $request->ambito_aplicacion;
+            $save->path = 'storage/documents' . $array[1];
+            $save->save();
+            return redirect()->route('admin.articles.edit', $save)->with('info', 'El articulo se creó con éxito');
+        } else {
+            return redirect()->route('admin.articles.create')
+                ->with('error', 'No se ha creado aún el artículo.');
+        }
     }
-
 
     public function edit(Article $article)
     {

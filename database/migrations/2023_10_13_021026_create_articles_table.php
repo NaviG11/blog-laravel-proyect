@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('tipo');
             $table->string('descripcion');
             $table->string('ambito_aplicacion');
+            $table->string('path');
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ class TagFactory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->unique()->word(20);
+        $name = $this->faker->unique()->word(2);
         return [
             'name' => $name,
             'slug' => Str::slug($name),

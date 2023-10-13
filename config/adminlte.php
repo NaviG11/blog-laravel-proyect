@@ -350,16 +350,16 @@ return [
         //    // 'active' => ['admin/centros*'],
         //    // 'can' => 'admin.centrosLocales.index',
         // ],
-        
-        [
-            'text' => 'Articulos',
-            'route'  => 'admin.articles.index',
-            'icon' => 'fab fa-fw fa-buffer',
-            'icon_color' => 'purple',
-            //'active' => ['admin/articles*'],
-            //'can' => 'admin.articles.index',
-        ],
-        
+
+        // [
+        //     'text' => 'Articulos',
+        //     'route'  => 'admin.articles.index',
+        //     'icon' => 'fab fa-fw fa-buffer',
+        //     'icon_color' => 'purple',
+        //     //'active' => ['admin/articles*'],
+        //     //'can' => 'admin.articles.index',
+        // ],
+
         // Todo: Agregar link para la nueva pestaña de etiquetas
         [
             'route'  => 'admin.tags.index',
@@ -370,6 +370,7 @@ return [
             'active' => ['admin/tags*'],
             'can' => 'admin.tags.index',
         ],
+        
         // [
         //     'text'    => 'Registros',
         //     'icon'    => 'fas fa-fw fa-share',
@@ -408,7 +409,7 @@ return [
         //         ],
         //     ],
         // ],
-        ['header' => 'OPCIONES DE BLOG'],
+        ['header' => 'OPCIONES'],
         [
             'text'       => 'Mi Lista de posts',
             'route'        => 'admin.posts.index',
@@ -430,12 +431,20 @@ return [
             'icon_color' => 'purple',
         ],
         [
+            'text' => 'Reglamentos',
+            'route'  => 'admin.articles.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'icon_color' => 'purple',
+            //'active' => ['admin/articles*'],
+            //'can' => 'admin.articles.index',
+        ],
+        [
             'text' => 'Centros Locales',
             'route'  => 'admin.centers.index',
             'icon' => 'fab fa-fw fa-buffer',
             'icon_color' => 'purple',
-           // 'active' => ['admin/centros*'],
-           // 'can' => 'admin.centrosLocales.index',
+            // 'active' => ['admin/centros*'],
+            // 'can' => 'admin.centrosLocales.index',
         ],
         // [
         //     'text'       => 'Subir Documento',

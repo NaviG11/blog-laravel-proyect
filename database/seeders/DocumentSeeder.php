@@ -13,7 +13,7 @@ class DocumentSeeder extends Seeder
      */
     public function run(): void
     {
-        $documents = Document::factory(10)->create();
+        $documents = Document::factory(1)->create();
 
         // foreach ($documents as $document)
         // {

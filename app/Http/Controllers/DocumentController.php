@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\Document;
 
@@ -10,7 +11,7 @@ class DocumentController extends Controller
     // Crear un controllador para descargar archivos PDF página principal
     public function index()
     {
-        $documents = Document::where('status', 1)->get();
+        $documents = Article::all();
         return view('documents.index', compact('documents'));
     }
     
