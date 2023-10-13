@@ -105,11 +105,11 @@
                         <a href="{{ route('centers.index') }}"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Centros
                             de ayuda</a>
-                        <a href=""
+                        <a href="http://localhost/Sistema%20Web%20Contra%20la%20Violencia/"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Cuestionario</a>
                         <a href="{{ route('documents.index') }}"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Reglamentos</a>
-                        <a href=""
+                        <a href="http://localhost/PROY%20OCTUBRE/PROY%20OCTUBRE/formularioDenuncia.php"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Denuncia</a>
                         <a href=""
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Eventos</a>
@@ -200,11 +200,11 @@
             <a href="{{ route('centers.index') }}"
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Centros
                 de ayuda</a>
-            <a href=""
+            <a href="http://localhost/Sistema%20Web%20Contra%20la%20Violencia/"
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Cuestionario</a>
             <a href="{{ route('documents.index') }}"
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Reglamentos</a>
-            <a href=""
+            <a href="http://localhost/PROY%20OCTUBRE/PROY%20OCTUBRE/formularioDenuncia.php"
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Denuncia</a>
             <a href=""
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Eventos</a>
