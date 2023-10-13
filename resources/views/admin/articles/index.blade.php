@@ -28,7 +28,6 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-                        <th>Fecha Promulgacion</th>
                         <th>Tipo</th>
                         <th>Descripcion</th>
                         <th>Ambito De Aplicacion</th>
@@ -40,7 +39,6 @@
                         <tr>
                             <td>{{ $article->id }}</td>
                             <td>{{ $article->name }}</td>
-                            <td>{{ $article->fecha_promulagacion }}</td>
                             <td>{{ $article->tipo }}</td>
                             <td>{{ $article->descripcion }}</td>
                             <td>{{ $article->ambito_aplicacion }}</td>
