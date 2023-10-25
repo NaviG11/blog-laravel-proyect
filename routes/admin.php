@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\CenterController;
 use App\Http\Controllers\Admin\EventoController;
+use App\Http\Controllers\Admin\FormController;
 
 // Route::get('', function () {
 //     return 'Bienvenido administrador';
@@ -56,3 +57,4 @@ Route::resource('centers', CenterController::class)
 
 // Route::resource('centers', CenterController::class)
 // ->names('admin.centers');
+

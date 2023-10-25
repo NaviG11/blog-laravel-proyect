@@ -7,6 +7,9 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\EventoController;
 
+use App\Http\Controllers\Admin\FormController;
+
+
 Route::get('/', [PostController::class, 'index'])->name('posts.index');
 
 Route::resource('/documents', DocumentController::class);
@@ -28,4 +31,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/mi-ruta/create', [FormController::class, 'create']);
+
+Route::post('/mi-ruta/create', [FormController::class, 'store']);
+
 // Route::resource('centers', CenterController::class);
