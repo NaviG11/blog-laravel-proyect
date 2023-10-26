@@ -9,6 +9,10 @@ use App\Http\Controllers\EventoController;
 
 use App\Http\Controllers\Admin\FormController;
 
+// °°°°°°°°°°°°°°°°°°°°°°° VIDEO °°°°°°°°°°°°°°°°°°°°°°°°
+use App\Http\Controllers\VideoController;
+
+// °°°°°°°°°°°°°°°°°°°°°°° VIDEO °°°°°°°°°°°°°°°°°°°°°°°°
 
 Route::get('/', [PostController::class, 'index'])->name('posts.index');
 
@@ -37,3 +41,9 @@ Route::get('/mi-ruta/create', [FormController::class, 'create']);
 Route::post('/mi-ruta/create', [FormController::class, 'store']);
 
 // Route::resource('centers', CenterController::class);
+
+// °°°°°°°°°°°°°°°°°°°°°°° VIDEO °°°°°°°°°°°°°°°°°°°°°°°°
+Route::resource('video',VideoController::class);
+
+
+// °°°°°°°°°°°°°°°°°°°°°°° VIDEO °°°°°°°°°°°°°°°°°°°°°°°°
