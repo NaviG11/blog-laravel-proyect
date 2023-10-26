@@ -55,6 +55,13 @@ Route::resource('documents', DocumentController::class)
 Route::resource('centers', CenterController::class)
     ->names('admin.centers');
 
+Route::resource('forms', FormController::class)
+    ->names('admin.form');
+
+
+
+Route::post('/form/actualizar-estado/{id}', [FormController::class, 'actualizarEstado'])
+    ->name('actualizar.estado');
 // Route::resource('centers', CenterController::class)
 // ->names('admin.centers');
 

@@ -18,6 +18,7 @@ Route::get('/', [PostController::class, 'index'])->name('posts.index');
 
 Route::resource('/documents', DocumentController::class);
 Route::resource('/articles', ArticleController::class);
+Route::resource('/form', FormController::class);
 Route::resource('/centers', CenterController::class);
 Route::resource('/evento', EventoController::class);
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
