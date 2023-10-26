@@ -190,7 +190,7 @@
                 </div>
                 <div class="form-content">
                     <label for="telefono">Núm. de Telefono o Celular </label>
-                    <input type= "tel" id="phone" name="phone" placeholder="Número de Telefono o Celular">
+                    <input type= "tel" id="telefono" name="telefono" placeholder="Número de Telefono o Celular">
                 </div>
 
             </div>
@@ -253,7 +253,7 @@
                 
                 <div class="form-content">
                     <label for="archivo">Adjuntar archivo(Evidencia)</label>
-                    <input type= "file" id="evidencia" name="evidencia" >
+                    <input type= "file" id="archivo" name="archivo" >
                     
                 </div>
             </div>

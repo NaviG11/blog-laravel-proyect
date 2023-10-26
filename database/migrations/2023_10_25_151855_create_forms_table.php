@@ -26,6 +26,7 @@ return new class extends Migration
             $table->text('detalle');
             $table->date('fecha');
             $table->string('archivo');
+            $table->string('Estado')->default('No verificado');
             $table->timestamps();
         });
     }
