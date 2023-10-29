@@ -34,7 +34,15 @@ class FormController extends Controller
         $form->departamento = $request->input('departamento');
         $form->detalle = $request->input('detalle');
         $form->fecha = $request->input('fecha');
-        $form->archivo = $request->input('archivo');
+        
+        // Manejar el archivo
+        if ($request->hasFile('archivo')) {
+            $archivo = $request->file('archivo');
+            $nombreArchivo = time() . '_' . $archivo->getClientOriginalName();
+            $archivo->storeAs('public/uploads', $nombreArchivo);
+            $form->archivo = $nombreArchivo;
+        }
+
         $form->save();
         return 'Completado';
     } 
