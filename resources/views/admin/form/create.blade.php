@@ -287,14 +287,8 @@
                 <div class="form-content">
                        
                  <input class="btn" type="submit"  value="Generar PDF">
-                </div> 
-
-                 
-              
+                </div>             
             </div>
-            
-                  
-
         </form>
     </div>
 </body>

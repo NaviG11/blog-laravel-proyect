@@ -69,10 +69,23 @@
                 {!! Form::text('detalle', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre']) !!}
             </div>
 
-            <div class="form-group">
+            {{-- <div class="form-group">
                 {!! Form::label('archivo', 'Archivos') !!}
                 {!! Form::text('archivo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre']) !!}
-            </div>
+            </div> --}}
+            
+            
+            @if($form->archivo)
+                <div class="form-group">
+                    <label>Imagen Cargada:</label>
+                    <img src="{{ asset('storage/' . $form->archivo) }}" alt="Imagen Cargada">
+                    
+                </div>
+            @endif
+
+
+
+
             {{-- Error de validación --}}
             @error('nombre')
                 <span class="text-danger">{{ $message }}</span>
