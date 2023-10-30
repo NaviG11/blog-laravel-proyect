@@ -207,7 +207,7 @@
                 </div>
                 <div class="form-content">
                     <label for="unipolicial">Unidad Policial</label>
-                    <input type= "text" id="unidad" name="unidad" placeholder="Unidad Policial">
+                    <input type= "text" id="unipolicial" name="unipolicial" placeholder="Unidad Policial">
                 </div>
                 <div class="form-content">
                     <label for="cargo">Cargo que Ocupa</label>
