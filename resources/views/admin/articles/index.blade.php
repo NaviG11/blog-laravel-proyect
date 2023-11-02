@@ -5,9 +5,9 @@
 @section('content_header')
 
     {{--@can('admin.articles.create')--}}
-    <a class="btn btn-secondary btn-sm float-right" href="{{ route('admin.articles.create') }}">Agregar Articulo</a>
+    <a class="btn btn-secondary btn-sm float-right" href="{{ route('admin.articles.create') }}">Agregar Reglamento</a>
     {{--@endcan--}}
-    <h1>Listar Articulos</h1>
+    <h1>Listar Reglamento</h1>
 @stop
 
 @section('content')

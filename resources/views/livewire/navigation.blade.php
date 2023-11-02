@@ -109,7 +109,7 @@
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Cuestionario</a>
                         <a href="{{ route('documents.index') }}"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Reglamentos</a>
-                        <a href="http://localhost/PROY%20OCTUBRE/PROY%20OCTUBRE/formularioDenuncia.php"
+                        <a href="http://127.0.0.1:8000/mi-ruta/create"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Denuncia</a>
                         <a href="{{ route('evento.index') }}"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Eventos</a>
