@@ -44,7 +44,7 @@
                                 @foreach ($documents as $document)
                                     <tr>
                                         <td class="px-6 py-4 border-b border-gray-200">{{ $document->name }}</td>
-                                        <td class="px-6 py-4 border-b border-gray-200">{{ $document->description }}</td>
+                                        <td class="px-6 py-4 border-b border-gray-200">{{ $document->descripcion }}</td>
                                         {{-- <td class="px-6 py-4 border-b border-gray-200">{{ $document->file }}</td> --}}
                                         <td class="px-6 py-4 border-b border-gray-200">
                                             @php

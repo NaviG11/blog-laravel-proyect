@@ -462,6 +462,14 @@ return [
             // 'active' => ['admin/centros*'],
             // 'can' => 'admin.centrosLocales.index',
         ],
+        [
+            'text' => 'Videos',
+            'route'  => 'video.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'icon_color' => 'purple',
+            // 'active' => ['admin/centros*'],
+            // 'can' => 'admin.centrosLocales.index',
+        ],
         // [
         //     'text'       => 'Subir Documento',
         //     'route'        => 'admin.documents.create',

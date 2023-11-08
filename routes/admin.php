@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\CenterController;
 use App\Http\Controllers\Admin\EventoController;
 use App\Http\Controllers\Admin\FormController;
+use App\Http\Controllers\VideoController;
 
 // Route::get('', function () {
 //     return 'Bienvenido administrador';
@@ -58,7 +59,8 @@ Route::resource('centers', CenterController::class)
 Route::resource('forms', FormController::class)
     ->names('admin.form');
 
-
+Route::resource('videos', VideoController::class)
+    ->names('video');
 
 Route::post('/form/actualizar-estado/{id}', [FormController::class, 'actualizarEstado'])
     ->name('actualizar.estado');

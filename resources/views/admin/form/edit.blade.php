@@ -74,16 +74,24 @@
                 {!! Form::text('archivo', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre']) !!}
             </div> --}}
             
-            
+            {{--
             @if($form->archivo)
                 <div class="form-group">
                     <label>Imagen Cargada:</label>
                     <img src="{{ asset('storage/' . $form->archivo) }}" alt="Imagen Cargada">
                     
                 </div>
+            @endif --}}
+
+            
+
+            @if ($form->archivo)
+                <label>Evidencia:</label>
+                <div class="form-group">
+                    <img src="{{ asset('storage/uploads/' . $form->archivo) }}" alt="Imagen del formulario" style="max-width: 300px; max-height: 200px;">
+                </div>
             @endif
-
-
+        
 
 
             {{-- Error de validación --}}
