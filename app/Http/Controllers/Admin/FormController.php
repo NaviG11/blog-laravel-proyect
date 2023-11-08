@@ -39,7 +39,7 @@ class FormController extends Controller
         if ($request->hasFile('archivo')) {
             $archivo = $request->file('archivo');
             $nombreArchivo = time() . '_' . $archivo->getClientOriginalName();
-            $archivo->storeAs('public/uploads', $nombreArchivo);
+            $archivo->storeAs('public/form', $nombreArchivo);
             $form->archivo = $nombreArchivo;
         }
 
