@@ -25,7 +25,7 @@ class ArticleController extends Controller
         // $article = Article::create($request->all());
         $file = $request->file('file');
         if ($file) {
-            $name = $file->getClientOriginalName();
+            $name = $request->name;
             $path = $file->store('public/documents');
             $array = explode('public/documents', $path);
             $save = new Article;

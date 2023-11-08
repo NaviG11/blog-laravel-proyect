@@ -44,7 +44,7 @@ Route::post('/mi-ruta/create', [FormController::class, 'store']);
 
 Route::match(['get', 'post'], '/ruta/generar-pdf', [FormController::class, 'generarPDF']);
 
-
+Route::post('/guardar-ubicacion',[FormController::class, 'store']);
 
 // Route::resource('centers', CenterController::class);
 
