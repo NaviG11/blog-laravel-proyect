@@ -18,11 +18,12 @@ class VideoController extends Controller
         return view('video.index', compact('videos'));
         //
     }
+    
 
     public function muestra()
     {
         $videos = Video::all();
-        return view('video.videos',  compact('videos'));
+        return view('admin.video.videos',  compact('videos'));
         //
     }
     /**
@@ -31,7 +32,7 @@ class VideoController extends Controller
     public function create()
     {
         
-        return view('video.create');
+        return view('admin.video.create');
         //
     }
 
@@ -59,7 +60,7 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        return view('video.show', compact('video'));
+        return view('admin.video.show', compact('video'));
         //
     }
 
@@ -68,7 +69,7 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        return view('video.edit', compact('video'));
+        return view('admin.video.edit', compact('video'));
         //
     }
 

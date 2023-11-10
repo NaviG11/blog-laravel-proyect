@@ -13,7 +13,7 @@
             EDIT VISTA
             @csrf
             {{ method_field('PATCH')}}
-            @include('video.form')
+            @include('admin.video.form')
             
         </form>        
     </div>

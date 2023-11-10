@@ -21,6 +21,7 @@ Route::resource('/articles', ArticleController::class);
 Route::resource('/form', FormController::class);
 Route::resource('/centers', CenterController::class);
 Route::resource('/evento', EventoController::class);
+// Route::resource('/video', VideoController::class);
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('category/{category}', [PostController::class, 'category'])->name('posts.category');

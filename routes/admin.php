@@ -60,7 +60,7 @@ Route::resource('forms', FormController::class)
     ->names('admin.form');
 
 Route::resource('videos', VideoController::class)
-    ->names('video');
+    ->names('admin.video');
 
 // Route::resource('forms', VideoController::class)
 //     ->names('admin.form');

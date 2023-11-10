@@ -1,74 +1,76 @@
-@extends('adminlte::page')
-@section('title', 'Dashboard')
-@section('content_header')
-    <h1>Centro de apoyo</h1>
-@stop
-@section('content')
+<x-app-layout>
+    <div class="container py-8">
+        <div class="w-full mx-auto">
+            <h2 class="text-4xl text-purple-300 leading-8 font-bold mt-2">Videos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {{-- @foreach ($videos as $document)
+                    <div class="bg-white p-4 border border-gray-200 rounded-lg shadow-md">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">{{ $document->title }}</h3>
+                            <p class="text-gray-600 mt-2">{{ $document->description }}</p>
+                            <p class="text-gray-600 mt-2">{{ $document->type }}</p>
+                            <p class="text-gray-600 mt-2">{{ $document->video_url }}</p>
+                            <a href="http://{{ $document->video_url }}"
+                                class="text-blue-500 hover:text-blue-700 hover:underline mt-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="underline">Ver video</span>
+                        </div>
+                    </div>
+                @endforeach --}}
+                {{-- @foreach ($videos as $document)
+                    <div class="bg-white p-4 border border-gray-200 rounded-lg shadow-md mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">{{ $document->title }}</h3>
+                            <p class="text-gray-600 mt-2">{{ $document->description }}</p>
+                            <p class="text-gray-600 mt-2">{{ $document->type }}</p>
+                            <p class="text-gray-600 mt-2">{{ $document->video_url }}</p>
+                            <a href="{{ $document->video_url }}" target="_blank"
+                                class="text-blue-500 hover:text-blue-700 hover:underline mt-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="underline">Ver video</span>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach --}}
+                @foreach ($videos as $document)
+                    <div class="bg-white p-4 border border-gray-200 rounded-lg shadow-md mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">{{ $document->title }}</h3>
+                            <p class="text-gray-600 mt-2">{{ $document->description }}</p>
+                            <p class="text-gray-600 mt-2">{{ $document->type }}</p>
 
-PRINCIPAN INDEX
-<div class="container">
-    <div class="card">
-        <div class="card-body">
-            </br>
-            <a class="btn btn-secondary btn-sm float-right" href="{{ route('video.create') }}">Agregar Videos</a>
-            </br>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Titulo</th>
-                        <th>Descripcion</th>
-                        <th>Url</th>
-                        <th>Estado</th>
-                        <th colspan="3" style="text-align: center;">Acciones</th>                
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($videos as $video)
-                        <tr>
-                            <td>{{ $video->id }}</td>
-                            <td>{{ $video->title }}</td>
-                            <td>{{ $video->description }}</td>
-                            <td>{{ $video->video_url }}</td>
-                            
-                            <td>{{ $video->type }}</td>
-                            <td width="10px">
-                                {{-- @can('video.edit') --}}
-                                    <a class="btn btn-warning btn-sm"
-                                        href="{{ route('video.edit', $video) }}">Editar</a>
-                                {{-- @endcan --}}
-                            </td>
-                            {{-- para eliminar un video --}}
-                            <td width="10px">
-                                    <form action="{{ route('video.destroy', $video) }}" method="POST">
-                                        @csrf
-                                        @method('delete')
-                                        <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
-                                    </form>
-                            </td>                         
-                            {{--°°°°°°°°°°°°°°°° Video °°°°°°°°°°°°°°°°°°--}}
-                            <td width="10px">
-                                {{-- @can('video.edit') --}}
-                                    <a class="btn btn-primary btn-sm"
-                                        href="{{ route('video.show', $video) }}">Ver</a>
-                                {{-- @endcan --}}
-                            </td>
-                            {{--°°°°°°°°°°°°°°°° Video °°°°°°°°°°°°°°°°°°--}}
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                            {{-- Video iframe --}}
+                            <div class="mt-2">
+                                <iframe width="100%" height="315" src="{{ $document->video_url }}" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+
+                            {{-- Video URL --}}
+                            <a href="{{ $document->video_url }}" target="_blank"
+                                class="text-blue-500 hover:text-blue-700 hover:underline mt-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="underline">Ver video</span>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+
+
+
+            </div>
         </div>
     </div>
-</div>
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script>
-        console.log('Hi!');
-    </script>
-@stop
-@stop
+</x-app-layout>

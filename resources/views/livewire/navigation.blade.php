@@ -103,8 +103,7 @@
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
                         <a href="{{ route('centers.index') }}"
-                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Centros
-                            de ayuda</a>
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Centros</a>
                         <a href="http://localhost/Sistema%20Web%20Contra%20la%20Violencia/"
                             class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Cuestionario</a>
                         <a href="{{ route('documents.index') }}"
@@ -129,6 +128,8 @@
                             </div>
 
                         </div>
+                        <a href="{{ route('video.index') }}"
+                            class="no-underline text-gray-300 hover:bg-purple-400 hover:text-white rounded-md px-3 py-2 text-xl font-bold">Videos</a>
                     </div>
                 </div>
             </div>
@@ -200,8 +201,7 @@
     <div class="sm:hidden" id="mobile-menu" x-show="open" x-on:click.away="open=false">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <a href="{{ route('centers.index') }}"
-                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Centros
-                de ayuda</a>
+                class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Centros</a>
             <a href="http://localhost/Sistema%20Web%20Contra%20la%20Violencia/"
                 class="text-gray-300 hover:bg-purple-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Cuestionario</a>
             <a href="{{ route('documents.index') }}"

@@ -464,7 +464,7 @@ return [
         ],
         [
             'text' => 'Videos',
-            'route'  => 'video.index',
+            'route'  => 'admin.video.index',
             'icon' => 'fab fa-fw fa-buffer',
             'icon_color' => 'purple',
             // 'active' => ['admin/centros*'],

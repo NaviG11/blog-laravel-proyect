@@ -13,7 +13,7 @@ CREATE VISTA
     <div class="card-body">
         <form action="{{ url('/video') }}" method="post" enctyte="multipart/form-data">
             @csrf
-            @include('video.form')
+            @include('admin.video.form')
 
         </form>
     </div>
