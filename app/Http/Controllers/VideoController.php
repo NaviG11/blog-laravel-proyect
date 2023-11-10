@@ -11,6 +11,7 @@ class VideoController extends Controller
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
         $videos = Video::all();
@@ -18,6 +19,12 @@ class VideoController extends Controller
         //
     }
 
+    public function muestra()
+    {
+        $videos = Video::all();
+        return view('video.videos',  compact('videos'));
+        //
+    }
     /**
      * Show the form for creating a new resource.
      */

@@ -330,17 +330,19 @@
                     </div>
                     <div id="map" style="height: 400px;"></div> <!-- Contenedor del mapa -->
                     
-                    <div class="form-group">     
-                        <div class="form-content">
-                            <input type="submit" name="guardar" value="Enviar Denuncia">
-                        </div> 
+                    <div class="form-content">
+                        <label class="col-sm-4 col-form-label">Ubicacion:</label>
+                        <div class="col-sm-8">
+                            <div id="mapa"></div>
+                        </div>
                     </div>
 
-                    <form id="" method="POST" action="/guardar-ubicacion">
-                        <!-- Otros campos del formulario -->
-                        <input type="hidden" id="latitud" name="latitud" />
-                        <input type="hidden" id="longitud" name="longitud" />
-                    </form>
+                    <!-- Otros campos del formulario LATITUD Y LONGITUD   -->
+                    <input type="hidden" id="latitud" name="latitud" value="-16.290154"/>
+                    <input type="hidden" id="longitud" name="longitud" value="-63.588653"/>
+
+
+
                     
                     
                     <script>
@@ -367,18 +369,45 @@
                             // Obtener los valores de latitud y longitud del mapa
                             var latitud = document.getElementById('latitud').value; // Suponiendo que estos valores ya fueron actualizados por el mapa
                             var longitud = document.getElementById('longitud').value; // Suponiendo que estos valores ya fueron actualizados por el mapa
+                            
+
+                            // Mostrar los valores actualizados en el div con id "coordenadas"
+                            var coordenadasDiv = document.getElementById('coordenadas');
+                            coordenadasDiv.textContent = 'Latitud: ' + latitud + ', Longitud: ' + longitud;
+
 
                             // Actualizar los campos ocultos
                             document.getElementById('latitud').value = latitud;
                             document.getElementById('longitud').value = longitud;
+                            
+
+                            console.log('Latitud:', latitud);
+                            console.log('Longitud:', longitud);
 
                             // Enviar el formulario
-                            document.getElementById('miFormulario').submit();
+                            document.getElementById('/mi-ruta').submit();
                         }
                     </script>       
                                 <!-- Reemplaza "TU_CLAVE_DE_API" con tu clave de API de Google Maps -->
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoHaKhaWJyfqDuHKVrTHErkpf-yBn-Scs&callback=initMap" async defer></script>
- 
+                    
+
+                    <div id="coordenadas"></div>
+
+                    <p>latitud</p>
+                    
+
+
+                    <div class="form-group">     
+                        <div class="form-content">
+                            <input type="submit" name="guardar" value="Enviar Denuncia">
+                        </div> 
+                    </div>
+
+                    
+                    
+                    
+                    
                     
                 </form>
             </div>

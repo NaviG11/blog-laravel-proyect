@@ -62,6 +62,10 @@ Route::resource('forms', FormController::class)
 Route::resource('videos', VideoController::class)
     ->names('video');
 
+// Route::resource('forms', VideoController::class)
+//     ->names('admin.form');
+Route::get('video-vista', [VideoController::class, 'muestra']);
+
 Route::post('/form/actualizar-estado/{id}', [FormController::class, 'actualizarEstado'])
     ->name('actualizar.estado');
 // Route::resource('centers', CenterController::class)

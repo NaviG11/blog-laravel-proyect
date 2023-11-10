@@ -51,5 +51,6 @@ Route::post('/guardar-ubicacion',[FormController::class, 'store']);
 // °°°°°°°°°°°°°°°°°°°°°°° VIDEO °°°°°°°°°°°°°°°°°°°°°°°°
 Route::resource('video',VideoController::class);
 
+Route::get('video-vista', [VideoController::class, 'muestra']);
 
 // °°°°°°°°°°°°°°°°°°°°°°° VIDEO °°°°°°°°°°°°°°°°°°°°°°°°

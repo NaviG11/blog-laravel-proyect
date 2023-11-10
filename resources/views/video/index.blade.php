@@ -30,6 +30,7 @@ PRINCIPAN INDEX
                             <td>{{ $video->title }}</td>
                             <td>{{ $video->description }}</td>
                             <td>{{ $video->video_url }}</td>
+                            
                             <td>{{ $video->type }}</td>
                             <td width="10px">
                                 {{-- @can('video.edit') --}}
