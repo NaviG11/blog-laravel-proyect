@@ -37,7 +37,8 @@
     <div class="min-h-screen mt-0 bg-left justify-center"
         style="background-image: url('https://img.freepik.com/vector-gratis/fondo-textura-hoja-papel-arrugado-blanco_1017-31714.jpg'); background-size: cover;">
         @livewire('navigation')
-
+        
+        @livewire('chat')
         @if (request()->is('/'))
             @livewire('carousel-component')
         @endif
