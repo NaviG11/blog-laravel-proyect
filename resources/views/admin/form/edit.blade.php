@@ -88,7 +88,7 @@
             @if ($form->archivo)
                 <label>Evidencia:</label>
                 <div class="form-group">
-                    <img src="{{ asset('storage/uploads/' . $form->archivo) }}" alt="Imagen del formulario" style="max-width: 300px; max-height: 200px;">
+                    <img src="{{ asset('storage/form/' . $form->archivo) }}" alt="Imagen del formulario" style="max-width: 300px; max-height: 200px;">
                 </div>
             @endif
         
